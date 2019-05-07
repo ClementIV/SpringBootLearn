@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration scan = "true" scanPeriod="60 seconds" debug="false">
+    <contextName>logback</contextName>
+    <property name="root.log.path" value="K:\\SpringBoot\\resources\\logback\\logback.log"/>
+    <property name="controller.log.path" value="K:\\SpringBoot\\resources\\logback\\controller.log"/>
+    <property name="packageController.log.path" value="K:\\SpringBoot\\resources\\logback\\packageController.log"/>
+
+    <!--输出到控制台 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="file"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${root.log.path}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logback.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+    </root>
+
+    <!--输出到文件 -->
+    <appender name="controller"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${controller.log.path}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>controller.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!--输出到文件 -->
+    <appender name="packageController"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${packageController.log.path}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>packageController.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.example.lesson5.controller" level="DEBUG" additivity="false">
+        <appender-ref ref="packageController"/>
+    </logger>
+    <!--name为：LogbackController类的全路径 -->
+    <logger name="com.example.lesson5.controller.LogbackController" level="INFO"
+            additivity="false">
+        <appender-ref ref="controller" />
+    </logger>
+</configuration>
