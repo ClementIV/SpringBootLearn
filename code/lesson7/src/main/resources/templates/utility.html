@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org">
+<head>
+    <meta charset="UTF-8">
+    <title>utility</title>
+</head>
+<body>
+    <h4>内置变量</h4>
+    字符串长度：<span th:text="${#strings.length(words)}"/><br/>
+    <span th:text="${#strings.concat('字符串连接： ',words)}"></span><br/>
+    时间格式化： <span th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}"></span>
+</body>
+</html>

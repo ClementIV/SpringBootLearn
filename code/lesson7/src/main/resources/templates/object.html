@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Object </title>
+</head>
+    <h4>内置对象</h4>
+    request的信息username: <span th:text="${#request.getAttribute('username')}"></span><br/>
+    session信息loginName: <span th:text="${session.loginName}"></span><br/>
+    操作系统地区：<span th:text="${#locale.country}"></span>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>string</title>
+</head>
+<h4>if unless</h4>
+<body>
+<span th:if="${flag == 'true'}"> if判断：我是山大王 </span>
+<span th:unless="${flag != 'false'}"> unless判断: 我是山大王 </span>
+
+<div th:switch="${flag}">
+    <p th:case="'true'">true 我是山大王</p>
+    <p th:case="'false'">false 我是java乐园</p>
+    <p th:case="*">我是妖精</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>for 循环</title>
+</head>
+<body>
+<h2>for 循环</h2>
+<table border="1px">
+    <tr>
+        <td>index</td>
+        <td>id</td>
+        <td>username</td>
+        <td>salary</td>
+    </tr>
+
+    <tr th:each="user , iterStat : ${users}">
+        <td th:text="${iterStat.index+3}"></td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.salary}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline </title>
+    <script th:inline="javascript">
+        function show(){
+            var username = [[ ${username }]];
+            alert(username);
+        }
+    </script>
+</head>
+<body>
+    <h4>内联</h4>
+    <div th:inline="text">
+        <p>你好，[[${username}]]!</p>
+    </div>
+    <button onclick="show()">show</button>
+</body>
+</html>
