@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CORS跨域请求corsSingle</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+			$("#corsSingle").click(function(){
+				$.ajax({
+					url: "http://127.0.0.1:8091/corsSingle",
+					success: function(data){
+						console.log(data);
+					}
+				})
+			});
+	});
+	
+</script>
+</head>
+<body>
+	<h3>CORS跨域请求corsSingle</h3>
+	<input type="button" id="corsSingle" value="CORS跨域请求corsSingle"/>
+</body>
+</html>

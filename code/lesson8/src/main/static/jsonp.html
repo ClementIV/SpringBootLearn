@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<script type="text/javascript">
+    function _callBackFun(data) {
+		alert('i am local function, can be called by remote server, remote server return data: '
+				+ data.result);
+	};
+	var url = "http://b.cors.com:8080/jsonpServlet?callback=_callBackFun";
+	var script = document.createElement('script');
+	script.setAttribute('src', url);
+	document.getElementsByTagName('head')[0].appendChild(script);
+</script>
+
+</head>
+<body>
+
+</body>

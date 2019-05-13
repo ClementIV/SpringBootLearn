@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cto51-lesson8.iml" filepath="$PROJECT_DIR$/cto51-lesson8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cto51-lesson8-8091/cto51-lesson8-8091.iml" filepath="$PROJECT_DIR$/cto51-lesson8-8091/cto51-lesson8-8091.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cto51-lesson8-8092/cto51-lesson8-8092.iml" filepath="$PROJECT_DIR$/cto51-lesson8-8092/cto51-lesson8-8092.iml" />
+    </modules>
+  </component>
+</project>

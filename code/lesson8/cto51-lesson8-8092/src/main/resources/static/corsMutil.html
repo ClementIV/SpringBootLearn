@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CORS跨域请求corsMutil</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+			$("#getUserInfo").click(function(){
+				$.ajax({
+					url: "http://127.0.0.1:8091/user/getUserInfo",
+					success: function(data){
+						console.log(data);
+					}
+				})
+			});
+	});
+	
+	$(function(){
+		$("#listUserInfo").click(function(){
+			$.ajax({
+				url: "http://127.0.0.1:8091/user/listUserInfo",
+				success: function(data){
+					console.log(data);
+				}
+			})
+		});
+	});
+	
+</script>
+</head>
+<body>
+	<h3>CORS跨域请求corsMutil</h3>
+	<input type="button" id="getUserInfo" value="CORS跨域请求getUserInfo"/><br/><br/>
+	<input type="button" id="listUserInfo" value="CORS跨域请求listUserInfo"/>
+</body>
+</html>
